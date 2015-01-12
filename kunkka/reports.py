@@ -24,7 +24,7 @@ service_reports={} ## Key Based
 #
 #
 ##FOR TABLE
-REFRESH_REPORT_IN_DB=False
+REFRESH_REPORT_IN_DB=True
 class Create_Tables:
     def __init__(self,titles,aggregators=None):
 
@@ -734,7 +734,7 @@ def  get_provider_company_list(request,**field):
 @Create_Tables(titles=["Booking Report","Cancellation Report"])
 def operator_payments(request,**field):
     api=gds_api.Gds_Api()
-    response=api.RMS_OPERATORs_BOOKING_CANCELLATION(**field)
+    response=api.RMS_OPERATORS_BOOKING_CANCELLATION(**field)
     return response
 ##################################################################################
 
