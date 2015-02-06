@@ -1,25 +1,31 @@
 <%block name="inner_content">
 <%inherit file="base.mako"/>    
     <div class="row clearfix">
+        <div class="col-md-12 column" style="maring-left:50px;">
+            <div id="progress_bar">              
+                Loading ...
+            </div>
+        </div>
         <div class="col-md-12 column" style="padding-left:0px;"id="tables">
             
         </div>               
         <script type="text/javascript">            
             $(document).ready(function(){               
                 callback=function(response)
-                {
+                {                    
                     if (response.success==true)
-                    {
-                        console.log( response.data.meta_content);
-                        generateTables(response.data.tables)
-                        generateCharts(response.data.charts)                     
+                    {                        
+                        generateTables(response.data.tables)                        
+                        generateCharts(response.data.charts)                                        
                     }else{
                         show_error(response.msg);
-                    }
-                }                
-                $.getJSON("${report_path}",callback)
-                
-                });
+                    }                    
+                    $("#progress_bar").hide();
+                }                                
+                $("#progress_bar").show();                
+                $.getJSON("${report_path}",callback)                
+
+            });
         </script>
         <div class="col-md-12 column" style="padding-left:0px;"id="charts">            
         </div>            

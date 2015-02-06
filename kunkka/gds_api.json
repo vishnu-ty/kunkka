@@ -474,6 +474,10 @@
                         {"name":"MANAGER_CONTACT_NO","type":"str","optional":true},
                         {"name":"MANAGER_NAME", "type":"str","optional":true},
                         {"name":"NEXT_VOUCHER", "type":"str","optional":true},
+                        {"name":"COMMISSION_TYPE", "type":"int","optional":true},
+                        {"name":"AGENT_COMMISSION", "type":"str","optional":true},
+                        {"name":"ROUTE_COMM_PCT", "type":"str","optional":true},
+                        {"name":"ROUTE_COMM_PCT_UNDEF", "type":"str","optional":true},
                         {"name":"M_TICKET",     "type":"int","optional":true},                        
                         {"name":"CITY",         "type":"int","optional":true},
                         {"name":"MANAGEMENT_REGION","type":"int","optional":true}         
@@ -502,7 +506,8 @@
                         {"name":"EMAIL_ID",     "type":"str","optional":true},
                         {"name":"CAN_RECEIVE_CACH",  "type":"int","optional":true},
                         {"name":"PENDING_CACH_LIMIT","type":"int","optional":true},
-                        {"name":"PARENT_USER",  "type":"int","optional":true}
+                        {"name":"PARENT_USER",  "type":"int","optional":true},
+                        {"name":"DEPT",  "type":"int","optional":true}
                     ]
             },
             {
@@ -525,10 +530,24 @@
                         {"name":"USER_ID",       "type":"str","default":""},
                         {"name":"STATEMENT",       "type":"int","default":0},                        
                         {"name":"STR_FROM_DATE","type":"str","default":null},
-                        {"name":"STR_TO_DATE","type":"str","default":null}                                                
+                        {"name":"STR_TO_DATE","type":"str","default":null},
+                        {"name":"AGGREGATE","type":"int","default":0}                                                                        
 
                     ]
-            }             
+            },
+            {
+                "name":"RMS_GET_EVENTS",
+                "type":"query",
+                "params":
+                    [                        
+                        {"name":"STR_FROM_DATE",       "type":"str"},
+                        {"name":"STR_TO_DATE",       "type":"str"},                        
+                        {"name":"TYPE","type":"str","default":null},                        
+                        {"name":"CUSTOMER_EMAIL","type":"str","default":null},
+                        {"name":"CUSTOMER_MOBILE","type":"str","default":null}                                                
+
+                    ]
+            }              
             
         ]
 }

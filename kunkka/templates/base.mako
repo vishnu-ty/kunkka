@@ -39,6 +39,7 @@
   <script src="${request.static_url('kunkka:static/dataTable/js/dataTables.tableTools.js')}"></script>    
   <link href="${request.static_url('kunkka:static/dataTable/css/jquery.dataTables.css')}" rel="stylesheet">  
   <link href="${request.static_url('kunkka:static/dataTable/css/dataTables.tableTools.css')}" rel="stylesheet">    
+  <link rel="stylesheet" href="${request.static_url('kunkka:static/jstree/dist/themes/default/style.min.css')}" />
   <!--<script src="${request.static_url('kunkka:static/dataTable/DT_bootstrap.js')}"></script>    -->
   <script src="${request.static_url('kunkka:static/bootstrap-dialog/js/bootstrap-dialog.min.js')}"></script>
   <!--<link href="${request.static_url('kunkka:static/dataTable/DT_bootstrap.css')}" rel="stylesheet">      -->
@@ -235,6 +236,9 @@
     .bootstrap-dialog-close-button button.close{
       font-size: 30px;
     }
+    .panel-title{
+      font-weight: bold;      
+    }
     </style>   
 </head>
 
@@ -363,7 +367,7 @@
 	</div>
 	<script src="${request.static_url('kunkka:static/bootstrap/js/bootstrap.min.js')}"></script>
   <script src="${request.static_url('kunkka:static/context_menu.js')}"></script>  
-
+  <script src="${request.static_url('kunkka:static/jstree/dist/jstree.min.js')}"></script>
   <!--Data Table Editable-->
   <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
   <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
