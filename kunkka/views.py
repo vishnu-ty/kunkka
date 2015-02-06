@@ -425,6 +425,25 @@ def operators_payment(request):
     return data  
 ##################################################################################
 
+################################# Booking Events ################################
+# date            : 2015-02-02
+# description     : To show booking events and details
+@view_config(route_name='booking_events',renderer='kunkka:templates/booking_events.mako')
+@Auth('oauth',authorize=True)
+def booking_events(request):
+    booking_events_path="/report_ajax/"+'booking_events/?'    
+    date_from=None
+    if "from" in request.params:
+            date_from=request.params["from"]
+    data={'msg_type':'success','message':'','name':request.link.name,
+        'project_name':'Kunkka',
+        "booking_events_path":booking_events_path,
+        "date_from":date_from
+        }
+    print data
+    return data  
+##################################################################################
+
 conn_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
 might be caused by one of the following things:
