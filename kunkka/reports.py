@@ -878,7 +878,7 @@ def update_user_details(request,**field):
     return response 
 
 @Reporter(perm_enable=True,perm_groups=[1,35],name="User Pending Dues",enable=1,category="Reports",parent_path="report")
-@Create_Tables(titles=["USER PENDING DUES"],aggregators=[
+@Create_Tables(titles=["User Dues","Agent Wise User Dues"],aggregators=[
     ("AMOUNT",aggregator.Sum,0),
     ("PENDING_AMOUNT",aggregator.Sum,0)    
     ] )
