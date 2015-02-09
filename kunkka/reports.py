@@ -931,7 +931,7 @@ def get_all_user_credit_statement(request,**field):
 #RMS_GET_AGENT_PENDING_DUES
 
 @Reporter(perm_enable=True,perm_groups=[1,35],name="Agent Pending Dues",enable=1,category="Reports",parent_path="report")
-@Create_Tables(titles=["User Wise Agent Pending Dues","Agent Wise Pending Dues"])
+@Create_Tables(titles=["User Wise Agent Pending Dues","Agent Wise Pending Dues","Recharge Status"])
 def get_agent_dues(request,**field):
     user_id=request.user.username            
     if user_id:        
