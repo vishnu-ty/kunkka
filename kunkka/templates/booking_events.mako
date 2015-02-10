@@ -4,7 +4,7 @@
     <!--<script id="chart_js" src="${request.static_url('kunkka:static/highchart/highcharts.js')}"></script>    -->
     <!--<script id="chart_theme" src="${request.static_url('kunkka:static/highchart/themes/dark-green.js')}"></script>-->
     <div class="row">
-        <div class="col-md-2 input-group input-group-sm">
+        <div class="col-md-3 input-group input-group-sm">
             <span class="input-group-addon">Attempt Date:</span>
             <input type="text" class="form-control" id="from">
         </div>

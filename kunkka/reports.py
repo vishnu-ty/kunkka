@@ -916,7 +916,7 @@ def get_all_user_dues(request,**field):
     return response   
 
 @Reporter(perm_enable=True,perm_groups=[1,36],name="All Users Credit Statement",enable=1,category="Reports",parent_path="date_report")
-@Create_Tables(titles=["ALL USER CREDIT STATEMENT"],aggregators=[
+@Create_Tables(titles=["All Users Credit Statement"],aggregators=[
     ("RECHARGE_AMOUNT",aggregator.Sum,0),
     ("RECEIVED_AMOUNT",aggregator.Sum,0)    
     ])
@@ -956,7 +956,7 @@ def get_agent_credit_statement(request,**field):
     return response    
 
 @Reporter(perm_enable=True,perm_groups=[1,36],name="All Agents Pending Dues",enable=1,category="Reports",parent_path="report")
-@Create_Tables(titles=["User Wise Agent Pending Dues","Agent Wise Pending Dues"])
+@Create_Tables(titles=["User Wise Agent Pending Dues","Agent Wise Pending Dues","Recharge Status"])
 def get_all_agents_dues(request,**field):    
     api=gds_api.Gds_Api()
     response=api.RMS_GET_AGENT_PENDING_DUES(**field)
