@@ -1,8 +1,5 @@
 <%inherit file="base.mako"/>
-<%block name="control">
-    <script src="${request.static_url('kunkka:static/tran.js')}"></script>
-    <!--<script id="chart_js" src="${request.static_url('kunkka:static/highchart/highcharts.js')}"></script>    -->
-    <!--<script id="chart_theme" src="${request.static_url('kunkka:static/highchart/themes/dark-green.js')}"></script>-->
+<%block name="control">    
     <div class="row">
         <div class="col-md-3 input-group input-group-sm">
             <span class="input-group-addon">Attempt Date:</span>
